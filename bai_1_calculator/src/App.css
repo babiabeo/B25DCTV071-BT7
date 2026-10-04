@@ -1,0 +1,58 @@
+.cal-body {
+  width: 400px;
+  height: 600px;
+  background-color: #7b7b7b;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+}
+
+.display {
+  flex: 1;
+  background-color: lightgreen;
+  display: flex;
+  flex-direction: column;
+  padding: 0 20px;
+}
+
+.display-top {
+  flex: 2;
+  overflow-x: scroll;
+  scrollbar-width: none;
+  white-space: nowrap;
+  display: flex;
+  justify-content: end;
+  align-items: end;
+  font-size: 1.5em;
+}
+
+.display-bottom {
+  flex: 3;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  font-size: 2.5em;
+  white-space: nowrap;
+  overflow-x: scroll;
+  scrollbar-width: none;
+}
+
+.grid-btn {
+  flex: 3;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  gap: 8px;
+}
+
+button {
+  cursor: pointer;
+  border-width: 0;
+  font-size: 1.75em;
+  user-select: none;
+}
+
+button:hover {
+  filter: brightness(0.8);
+}
