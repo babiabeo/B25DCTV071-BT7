@@ -62,7 +62,21 @@ export default function App() {
         <h1 className="greeting">Chào buổi {getDaytime()} &#x1F44B;</h1>
 
         {SECTIONS.map((sec) => (
-          <Section key={`sec_${sec.id}`} {...sec} />
+          <Section key={`sec_${sec.id}`} id={sec.id}>
+            <div className="container">
+              <h2>{sec.title}</h2>
+              <ul>
+                {sec.infoList.map(([name, description], i) => (
+                  <li key={`${sec.id}_${i}`}>
+                    <b>{name}:</b> {description}
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <div className="img-container">
+              <img src={sec.imageSrc} alt={sec.imageAlt} />
+            </div>
+          </Section>
         ))}
       </main>
       <Footer />
